@@ -1,0 +1,48 @@
+<HTML XMLns="http://www.w3.org/1999/xHTML">
+<head>
+    <!-- Jack Hosking
+         16932920
+         admin.html file for choice of modifying and querying database
+    -->
+    <title>Manage</title>
+    <script type="text/javascript" src="xhr.js"></script>
+    <script type="text/javascript" src="adminjs.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <a href="booking.html">Booking</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        Manage
+                    </li>
+                </ol>
+            </nav>
+            <h2>Manage A booking</h2>
+            <div id="confirmation">
+                <p></p>
+            </div>
+            <form role="form">
+                <div class="form-group">
+                    <input type="text" name="BookingNumber"> <br> <br>
+                    <input type="button" class="btn btn-success"
+                           onClick="assignment('assignment.php', 'confirmation', 'date')" value='view-requests'>
+                    <input type="button" class="btn btn-success"
+                           onClick="booking('manage.php', 'confirmation', BookingNumber.value)" value="assign-driver">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</HTML>

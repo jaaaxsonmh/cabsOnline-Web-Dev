@@ -1,0 +1,32 @@
+Jack Hosking 16932920
+
+Creation of database sql 
+
+CREATE TABLE IF NOT EXISTS cabsOnline
+	(
+		BookingNumber INT NOT NULL,
+		BookingDate DateTime NOT NULL,
+		BookingStatus VARCHAR(25) NOT NULL,
+		CustomerName VARCHAR(25) NOT NULL,
+		CustomerPhone INT(14) NOT NULL,
+		CustomerAddress VARCHAR(255) NOT NULL,
+		BookingPickupDate DateTime NOT NULL,
+		BookingDestination VARCHAR(40) NOT NULL,
+		PRIMARY KEY(BookingNumber)
+	)
+
+ALL other commands: 
+
+SELECT BookingNumber, CustomerName, CustomerPhone, CustomerAddress, BookingDestination, BookingPickupDate FROM cabsOnline WHERE BookingStatus = 'unassigned' AND BookingPickupDate BETWEEN '$date' AND '$futureDate'
+
+SELECT * FROM cabsOnline WHERE BookingNumber = '$bookingNumber'
+
+INSERT INTO 
+cabsOnline(BookingNumber, BookingDate, BookingStatus, CustomerName, CustomerPhone, CustomerAddress, BookingPickupDate, BookingDestination) 
+VALUES ('$bookingNumber', '$currentDateTime', 'unassigned', '$name', '$phone', '$pickupLocation', '$requestedDateTime', '$destination'
+
+SELECT * FROM cabsOnline WHERE BookingNumber = '$number'
+
+SELECT * FROM cabsOnline WHERE BookingNumber = '$num' AND BookingStatus = 'assigned'
+
+UPDATE cabsOnline SET BookingStatus = 'assigned' WHERE BookingNumber = '$number'
